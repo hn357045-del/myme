@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Nguyễn Thị Khánh Huyền | UI/UX Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- FLOATING DECORATIONS -->
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+    
+    <!-- Floating Icons -->
+    <div class="floating-icon heart-float" style="top: 15%; left: 10%;">❤️</div>
+    <div class="floating-icon star-float" style="top: 25%; right: 15%;">⭐</div>
+    <div class="floating-icon sparkles-float" style="bottom: 20%; left: 20%;">✨</div>
+    <div class="floating-icon heart-float" style="bottom: 30%; right: 10%;">💖</div>
+    
+    <!-- Floating Bears -->
+    <div class="floating-bear bear-sparkle" style="top: 20%; left: 5%;">🐻‍❄️</div>
+    <div class="floating-bear bear-rainbow" style="top: 40%; right: 8%;">🐻</div>
+    <div class="floating-bear bear-painter" style="bottom: 25%; left: 15%;">🎨</div>
+    <div class="floating-bear bear-coffee" style="bottom: 35%; right: 5%;">☕</div>
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">KH Huyền</div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Nguyễn Thị Khánh Huyền</h1>
+                <p class="hero-subtitle">Sinh viên khoa CNTT - Đồ họa Kỹ thuật số</p>
+                <p class="hero-quote">"Nghệ thuật nằm ở cách tôi nhìn thế giới."</p>
+                <a href="#projects" class="cta-button">View Projects</a>
+            </div>
+            <div class="hero-decoration"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Về tôi</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Giới thiệu</h3>
+                    <p>Tôi là sinh viên ngành Công nghệ thông tin, chuyên về Đồ họa kỹ thuật số. Đam mê thiết kế và luôn tìm kiếm cơ hội để phát triển kỹ năng trong lĩnh vực UI/UX và Graphic Design.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Định hướng nghề nghiệp</h3>
+                    <p>Trở thành UI/UX Designer / Graphic Designer chuyên nghiệp. Phát triển khả năng thiết kế sáng tạo kết hợp công nghệ để tạo ra những sản phẩm có tác động thực tế.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Kỹ năng chính</h3>
+                    <p>Adobe Photoshop, Illustrator, Figma (UI/UX cơ bản), HTML/CSS. Luôn học hỏi và cập nhật những xu hướng mới trong thiết kế.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Kỹ năng</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <div class="skill-header">
+                        <h3>Adobe Photoshop</h3>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percentage="90"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <h3>Adobe Illustrator</h3>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percentage="80"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <h3>Figma</h3>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percentage="70"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <h3>HTML/CSS</h3>
+                        <span class="skill-percentage">60%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percentage="60"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Dự án</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Dự án 5G</h3>
+                    <p>Nghiên cứu và ứng dụng mạng 5G trong các giải pháp công nghệ tiên tiến.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <h3>Dự án 6G</h3>
+                    <p>Tìm hiểu công nghệ mạng thế hệ mới và ứng dụng của công nghệ 6G.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI cho tự động hóa</h3>
+                    <p>Ứng dụng AI trong tự động hóa quy trình và tối ưu hóa hiệu suất.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Kinh nghiệm</h2>
+            <div class="experience-card">
+                <div class="experience-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="experience-content">
+                    <h3>Thiết kế và xây dựng website giới thiệu bản thân</h3>
+                    <p class="experience-role">Thiết kế UI, Code HTML/CSS</p>
+                    <p class="experience-description">Tạo ra website portfolio cá nhân với giao diện hiện đại, responsive và thân thiện với người dùng. Kết hợp thiết kế UI đẹp mắt với code HTML/CSS sạch và tối ưu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Liên hệ</h2>
+            <p class="contact-subtitle">Hãy kết nối với tôi qua các nền tảng dưới đây</p>
+            <div class="contact-grid">
+                <a href="mailto:hn357046@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Gmail</span>
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Nguyễn Thị Khánh Huyền. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
