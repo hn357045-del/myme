@@ -27,6 +27,9 @@ function updateThemeIcon() {
     }
 }
 
+const headerElement = document.querySelector('.header');
+const heroDecoration = document.querySelector('.hero-decoration');
+
 // ==================== Floating Elements Positioning ====================
 function randomizeFloatingPositions() {
     const bears = document.querySelectorAll('.floating-bear');
@@ -159,12 +162,12 @@ const fadeInObserver = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.12,
+    rootMargin: '0px 0px -60px 0px'
 });
 
 // Add fade-in-scroll class to elements that should animate
-document.querySelectorAll('.project-card, .about-card, .experience-card').forEach(element => {
+document.querySelectorAll('.hero-content, .section-title, .section-intro, .about-card, .skill, .project-card, .experience-card, .contact-info-card').forEach(element => {
     element.classList.add('fade-in-scroll');
     fadeInObserver.observe(element);
 });
@@ -173,11 +176,12 @@ document.querySelectorAll('.project-card, .about-card, .experience-card').forEac
 const navLinks = document.querySelectorAll('.nav-links a');
 
 window.addEventListener('scroll', () => {
+    updateHeaderState();
+    updateHeroParallax();
+
     let current = '';
-    
     document.querySelectorAll('section').forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         if (pageYOffset >= sectionTop - 200) {
             current = section.getAttribute('id');
         }
@@ -190,6 +194,20 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+function updateHeaderState() {
+    if (window.pageYOffset > 60) {
+        headerElement.classList.add('scrolled');
+    } else {
+        headerElement.classList.remove('scrolled');
+    }
+}
+
+function updateHeroParallax() {
+    if (!heroDecoration) return;
+    const offset = window.pageYOffset * 0.12;
+    heroDecoration.style.transform = `translateY(calc(-50% + ${offset}px))`;
+}
 
 // ==================== Floating Elements Animation Variation ====================
 function addAnimationVariation() {
@@ -208,6 +226,9 @@ addAnimationVariation();
 
 // ==================== Staggered Animation ====================
 window.addEventListener('load', () => {
+    updateHeaderState();
+    updateHeroParallax();
+
     // Add animation to hero content
     const heroContent = document.querySelector('.hero-content');
     if (heroContent) {
