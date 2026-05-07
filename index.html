@@ -174,7 +174,7 @@
                     <div class="tool-header">
                         <div>
                             <h3>Study Timer</h3>
-                            <p class="tool-subtitle">Pomodoro, nghỉ ngắn, nghỉ dài và Stopwatch.</p>
+                            <p class="tool-subtitle">Bấm giờ làm bài, tập trung với Pomodoro và thông báo khi cần nghỉ.</p>
                         </div>
                         <span class="badge">Focus</span>
                     </div>
@@ -209,6 +209,7 @@
                         <button type="button" id="timerReset" class="button secondary">Reset</button>
                     </div>
 
+                    <p class="timer-note">Bấm giờ làm bài để tập trung, hoặc dùng stopwatch khi cần theo dõi tiến độ.</p>
                     <div class="session-counter">Pomodoro completed: <span id="sessionCount">0</span></div>
                     <div class="timer-bears"><span class="bear">☕🐻</span><span class="bear">🎓🐻</span></div>
                 </div>
@@ -223,7 +224,13 @@
                     </div>
 
                     <form id="deadlineForm" class="deadline-form">
-                        <input type="text" id="taskTitle" placeholder="Tên nhiệm vụ" autocomplete="off" />
+                        <select id="taskType">
+                            <option value="Homework">Homework</option>
+                            <option value="Project">Project</option>
+                            <option value="Study">Study</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <input type="text" id="taskTitle" placeholder="Tên nhiệm vụ / Bài tập" autocomplete="off" />
                         <div class="deadline-row">
                             <input type="date" id="taskDate" />
                             <input type="time" id="taskTime" />
@@ -245,14 +252,14 @@
                     <div class="tool-header">
                         <div>
                             <h3>Study Notes</h3>
-                            <p class="tool-subtitle">Ghi chú nhanh, chọn màu và ghim nội dung quan trọng.</p>
+                            <p class="tool-subtitle">Ghi chú bài tập, lưu ý làm bài và pin nội dung quan trọng.</p>
                         </div>
                         <span class="badge">Notes</span>
                     </div>
 
                     <form id="noteForm" class="note-form">
-                        <input type="text" id="noteTitle" placeholder="Tiêu đề note" autocomplete="off" />
-                        <textarea id="noteContent" rows="4" placeholder="Nội dung note..."></textarea>
+                        <input type="text" id="noteTitle" placeholder="Tiêu đề note (ví dụ: lưu ý bài tập)" autocomplete="off" />
+                        <textarea id="noteContent" rows="4" placeholder="Ghi chú những điều cần nhớ khi làm bài..."></textarea>
                         <div class="note-form-footer">
                             <div class="note-colors" id="noteColors">
                                 <button type="button" class="note-color note-pink selected" data-color="pink"></button>

@@ -166,6 +166,7 @@ const noteForm = document.getElementById('noteForm');
 const noteGrid = document.getElementById('noteGrid');
 const noteColors = document.querySelectorAll('.note-color');
 const taskForm = document.getElementById('deadlineForm');
+const taskTypeSelect = document.getElementById('taskType');
 const taskList = document.getElementById('taskList');
 
 const studyTimerModes = {
@@ -475,7 +476,8 @@ function renderTasks() {
         title.textContent = task.title;
         const meta = document.createElement('span');
         meta.className = 'task-meta';
-        meta.textContent = `${formatTaskDate(task.due)} • Nhắc trước ${task.notifyBefore} phút`;
+        const typeLabel = task.type || 'Homework';
+        meta.textContent = `${typeLabel} • ${formatTaskDate(task.due)} • Nhắc trước ${task.notifyBefore} phút`;
         details.append(title, meta);
 
         const action = document.createElement('div');
@@ -503,6 +505,7 @@ function addTask(event) {
     const date = dateInput.value;
     const time = timeInput.value;
     const notifyBefore = parseInt(notifyInput.value, 10);
+    const type = (taskTypeSelect && taskTypeSelect.value) ? taskTypeSelect.value : 'Homework';
 
     if (!title || !date || !time) return;
 
@@ -512,6 +515,7 @@ function addTask(event) {
     taskState.tasks.push({
         id: `task-${Date.now()}`,
         title,
+        type,
         due: dueTime,
         notifyBefore,
         completed: false,

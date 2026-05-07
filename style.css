@@ -485,7 +485,11 @@ body.dark-mode .project-card {
 
 /* STUDY SECTION */
 .study {
-    background-color: var(--bg-secondary);
+    background-color: #121212;
+}
+
+body.dark-mode .study {
+    background-color: #0a0a0a;
 }
 
 .study-grid {
@@ -636,6 +640,24 @@ body.dark-mode .project-card {
     gap: 0.9rem;
     justify-content: center;
     margin-bottom: 1.2rem;
+}
+
+.timer-note {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.deadline-form select#taskType {
+    width: 100%;
+    border: 1px solid rgba(255, 182, 193, 0.4);
+    border-radius: 16px;
+    padding: 0.95rem 1rem;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-dark);
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .button {
