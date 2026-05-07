@@ -35,6 +35,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#study">Study</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -188,6 +189,113 @@
                             <li><i class="fas fa-check-circle role-icon"></i>Làm việc nhóm và hoàn thiện sản phẩm đúng deadline.</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STUDY TOOLS SECTION -->
+    <section id="study" class="study">
+        <div class="container">
+            <h2 class="section-title">Study Hub</h2>
+            <p class="section-intro">Một bộ công cụ học tập giúp tôi tối ưu thời gian, quản lý deadline và lưu ghi chú khi làm việc dự án thiết kế.</p>
+            <div class="study-grid">
+                <div class="tool-card timer-card">
+                    <div class="tool-header">
+                        <div>
+                            <h3>Study Timer</h3>
+                            <p class="tool-subtitle">Pomodoro, nghỉ ngắn, nghỉ dài và Stopwatch.</p>
+                        </div>
+                        <span class="badge">Focus</span>
+                    </div>
+
+                    <div class="timer-modes">
+                        <button type="button" class="timer-mode active" data-mode="pomodoro">Pomodoro</button>
+                        <button type="button" class="timer-mode" data-mode="shortBreak">Short Break</button>
+                        <button type="button" class="timer-mode" data-mode="longBreak">Long Break</button>
+                        <button type="button" class="timer-mode" data-mode="stopwatch">Stopwatch</button>
+                    </div>
+
+                    <div class="timer-display">
+                        <svg class="progress-ring" width="240" height="240">
+                            <defs>
+                                <linearGradient id="timerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ffb6c1" />
+                                    <stop offset="100%" stop-color="#9b59b6" />
+                                </linearGradient>
+                            </defs>
+                            <circle class="progress-bg" cx="120" cy="120" r="100" />
+                            <circle class="progress-circle" cx="120" cy="120" r="100" />
+                        </svg>
+                        <div class="timer-center">
+                            <span class="timer-label" id="timerLabel">25:00</span>
+                            <span class="timer-mode-label" id="timerModeLabel">Pomodoro</span>
+                        </div>
+                    </div>
+
+                    <div class="timer-buttons">
+                        <button type="button" id="timerStart" class="button primary">Start</button>
+                        <button type="button" id="timerPause" class="button secondary">Pause</button>
+                        <button type="button" id="timerReset" class="button secondary">Reset</button>
+                    </div>
+
+                    <div class="session-counter">Pomodoro completed: <span id="sessionCount">0</span></div>
+                    <div class="timer-bears"><span class="bear">☕🐻</span><span class="bear">🎓🐻</span></div>
+                </div>
+
+                <div class="tool-card deadline-card">
+                    <div class="tool-header">
+                        <div>
+                            <h3>Deadline Reminder</h3>
+                            <p class="tool-subtitle">Thêm deadline, chọn nhắc và quản lý task học tập.</p>
+                        </div>
+                        <span class="badge">Urgent</span>
+                    </div>
+
+                    <form id="deadlineForm" class="deadline-form">
+                        <input type="text" id="taskTitle" placeholder="Tên nhiệm vụ" autocomplete="off" />
+                        <div class="deadline-row">
+                            <input type="date" id="taskDate" />
+                            <input type="time" id="taskTime" />
+                        </div>
+                        <select id="notifyBefore">
+                            <option value="15">Nhắc trước 15 phút</option>
+                            <option value="30">Nhắc trước 30 phút</option>
+                            <option value="60">Nhắc trước 1 giờ</option>
+                            <option value="120">Nhắc trước 2 giờ</option>
+                            <option value="1440">Nhắc trước 1 ngày</option>
+                        </select>
+                        <button type="submit" class="button primary">Thêm deadline</button>
+                    </form>
+
+                    <div class="task-list" id="taskList"></div>
+                </div>
+
+                <div class="tool-card notes-card">
+                    <div class="tool-header">
+                        <div>
+                            <h3>Study Notes</h3>
+                            <p class="tool-subtitle">Ghi chú nhanh, chọn màu và ghim nội dung quan trọng.</p>
+                        </div>
+                        <span class="badge">Notes</span>
+                    </div>
+
+                    <form id="noteForm" class="note-form">
+                        <input type="text" id="noteTitle" placeholder="Tiêu đề note" autocomplete="off" />
+                        <textarea id="noteContent" rows="4" placeholder="Nội dung note..."></textarea>
+                        <div class="note-form-footer">
+                            <div class="note-colors" id="noteColors">
+                                <button type="button" class="note-color note-pink selected" data-color="pink"></button>
+                                <button type="button" class="note-color note-yellow" data-color="yellow"></button>
+                                <button type="button" class="note-color note-green" data-color="green"></button>
+                                <button type="button" class="note-color note-blue" data-color="blue"></button>
+                                <button type="button" class="note-color note-purple" data-color="purple"></button>
+                            </div>
+                            <button type="submit" class="button primary">Tạo note</button>
+                        </div>
+                    </form>
+
+                    <div class="note-grid" id="noteGrid"></div>
                 </div>
             </div>
         </div>
